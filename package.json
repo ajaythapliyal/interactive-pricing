@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "![Design preview for the Interactive pricing component coding challenge](./design/desktop-preview.jpg)",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel './src/*.html'",
+    "build": "rimraf dist & parcel build './src/*.html' --no-source-maps --public-url ./",
+    "clean": "rimraf dist",
+    "deep-clean": "rimraf dist"
   },
   "keywords": [],
   "author": "",

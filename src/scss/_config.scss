@@ -1,9 +1,17 @@
-$primary-color: hsl(176, 50%, 47%);
-$neutral-color: hsl(0, 0%, 48%);
+$color-primary1-100: hsl(174, 77%, 80%);
+$color-primary1-200: hsl(174, 86%, 45%);
+$color-primary2-100: hsl(14, 92%, 95%);
+$color-primary2-200: hsl(15, 100%, 70%);
+$color-primary3: hsl(226, 100%, 87%);
+
+$color-neutral1-100 : hsl(230, 100%, 99%);
+$color-neutral1-200 : hsl(224, 65%, 95%);
+$color-neutral1-300 : hsl(223, 50%, 87%);
+$color-neutral1-400 : hsl(225, 20%, 60%);
+$color-neutral1-500 : hsl(227, 35%, 25%);
 
 
 $maxWidth : 90em;
 $minWidth : 23.43em;
 
-$font-name : "Commissioner",
-sans-serif;
+$font-family: 'Manrope', sans-serif;
