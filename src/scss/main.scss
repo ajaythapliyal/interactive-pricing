@@ -17,20 +17,35 @@ main{
     background-repeat: no-repeat;
     min-height: 150px;
     background-position: center;
+    line-height: 2.5rem;
+    margin-bottom: 2em
+}
+
+.title-font{
+    @extend %font1;
+    font-size: 1.8rem;
+}
+
+.subtitle-font{
+    @extend %font2;
+}
+
+.card{
+    border-radius: 5px;
+    background-color: config.$color-neutral2;
+    box-shadow: 1px 1px 20px 1px config.$color-neutral1-300;
 }
 
 //util
 
-.font1{
+%font1{
     font-family: config.$font-family;
     font-weight: 800;
-    font-size: 1.8rem;
     color: config.$color-neutral1-500;
 }
 
-.font2{
+%font2{
     font-family: config.$font-family;
     font-weight: 600;
-    font-weight: 1rem;
     color: config.$color-neutral1-400
 }
