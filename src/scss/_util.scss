@@ -1,0 +1,73 @@
+@use "sass:math";
+@use "config";
+
+
+@function lighten($color, $amount) {
+    @return mix(white, $color, $amount);
+}
+
+
+@function darken($color, $amount) {
+    @return mix(black, $color, $amount);
+}
+
+
+@function clamped($minFs, $maxFs) {
+    $minFsNum: stripUnit($minFs);
+    $maxFsNum: stripUnit($maxFs);
+    $minWidthNum: stripUnit(config.$minWidth);
+    $maxWidthNum: stripUnit(config.$maxWidth);
+    $slope: math.div(($maxFsNum - $minFsNum), (($maxWidthNum) - ($minWidthNum)));
+    $yAxisIntersection: (($minWidthNum * -1) * $slope) + $minFsNum;
+    @return clamp($minFs, unquote("#{$yAxisIntersection * 1rem} + #{$slope * 100vw}"), $maxFs);
+}
+
+
+@function stripUnit($number) {
+    @if type-of($number)=='number'and not unitless($number) {
+        @return math.div($number, ($number * 0 + 1));
+    }
+
+    @return $number;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-items-baseline {
+    align-items: baseline;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.vertical-align-middle {
+    vertical-align: middle;
+}
+
+.text-align-center{
+    text-align: center;
+}
