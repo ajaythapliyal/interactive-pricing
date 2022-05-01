@@ -39,6 +39,10 @@ main{
     padding-right: min(7vw, 3em);
     padding-top: min(5vh, 3em);
     padding-bottom: min(5vh, 3em);
+
+    &>*:not(:first-child){
+        margin-top: 2em
+    }
 }
 
 .pageview{
@@ -62,6 +66,10 @@ main{
     width: 100%;
     background-color: config.$color-neutral1-300;
     height: 7px;
+
+    &:hover{
+        cursor: pointer;
+    }
 }
 
 .progress{
@@ -82,7 +90,7 @@ main{
     background-repeat: no-repeat;
     background-position: center;
     margin: 0;
-    left: 100%;
+    left: calc(100% - 1.2rem);
     bottom : 1rem
 }
 
