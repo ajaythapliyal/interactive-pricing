@@ -31,9 +31,59 @@ main{
 }
 
 .card{
+    width: util.clamped(16.9rem, 31.3rem);
     border-radius: 5px;
     background-color: config.$color-neutral2;
     box-shadow: 1px 1px 20px 1px config.$color-neutral1-300;
+    padding-left: min(7vw, 3em);
+    padding-right: min(7vw, 3em);
+    padding-top: min(5vh, 3em);
+    padding-bottom: min(5vh, 3em);
+}
+
+.pageview{
+    @extend %font2;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+}
+
+.billing{
+    @extend %font1;
+    font-size: 2.4rem;
+}
+
+.bill-unit{
+    @extend %font2;
+    font-size: 1rem;
+    vertical-align: middle;
+}
+
+.progress-bar{
+    width: 100%;
+    background-color: config.$color-neutral1-300;
+    height: 7px;
+}
+
+.progress{
+    height: 7px;
+    background-color: config.$color-primary1-100;
+    width: 50%;
+}
+
+.progress::after{
+    content:"";
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+    position: relative;
+    border-radius: 50%;
+    background-color: config.$color-primary1-200;
+    background-image: url(./../assets/images/icon-slider.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    left: 100%;
+    bottom : 1rem
 }
 
 //util
