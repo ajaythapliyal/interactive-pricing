@@ -96,7 +96,12 @@ main{
 
 .billing-mode{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 4em !important;
+}
+.ghost{
+    width: 25%;
 }
 
 .toggle{
@@ -104,9 +109,12 @@ main{
     height: 1.5em;
     border-radius: 15px;
     background-color: config.$color-neutral1-300;
+    // margin-left: 1em;
+    // margin-right: 1em;
 
     &:hover{
         background-color: config.$color-primary1-100;
+        cursor: pointer;
     }
 }
 
@@ -131,6 +139,26 @@ main{
     top: 2.4px;
 }
 
+.text1-font{
+    @extend %font2;
+    font-size: 0.8rem;
+}
+
+.discount{
+    font-family: config.$font-family;
+    font-weight: 600;
+    // margin-left: 1em;
+    background-color: config.$color-primary2-100;
+    color: config.$color-primary2-200;
+    font-size: 0.8rem;
+    border-radius: 10px;
+    padding: 5px
+}
+
+.features{
+    line-height: 1.5em;
+    
+}
 
 @media screen and (max-width:600px){
     .billing{
@@ -139,7 +167,15 @@ main{
     }
 
     .billing-mode{
-        margin-top: 80px !important;
+        margin-top: 120px !important;
+    }
+
+    .discount span{
+        display: none;
+    }
+
+    .ghost{
+        display: none;
     }
 }
 
@@ -155,4 +191,27 @@ main{
     font-family: config.$font-family;
     font-weight: 600;
     color: config.$color-neutral1-400
+}
+
+.section-separator{
+    width: 119%;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: config.$color-neutral1-300;
+    position: relative;
+    right: 9.5%;
+}
+
+.btn{
+    padding-left : 2.5em;
+    padding-right : 2.5em;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    border-radius: 20px;
+    background-color: config.$color-neutral1-500;
+    color: config.$color-neutral1-300;
+
+    &:hover{
+        color: config.$color-neutral2;
+    }
 }
